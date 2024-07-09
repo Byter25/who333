@@ -30,9 +30,11 @@ body{
   align-items: center;
   font-size: 50px;
 }
+img{
+  height: 333px;
+}
 audio{
-  display: none;
-  
+  display: none; 
 }
 .imgRandom {
   position: absolute;
