@@ -1,5 +1,5 @@
 const imgs = document.querySelectorAll('.imgRandom img');
-
+console.log("PAGINA CREADA POR BYTERDEV y Who333(Mijhu) @copyrigth 2024")
 // Función para obtener una posición aleatoria
 function getRandomPosition(img) {
     const x = Math.random() * window.innerWidth - 500;
