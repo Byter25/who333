@@ -15,7 +15,7 @@ function animateImage(img) {
 
     setTimeout(() => {
         img.style.opacity = 0;
-    }, 1000); // Esconde la imagen después de 1 segundo
+    }, 2000); // Esconde la imagen después de 1 segundo
 }
 
 // Función para animar todas las imágenes con una posición inicial aleatoria
