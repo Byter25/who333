@@ -2,13 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0;
-  list-style: none;
-  text-decoration: none; /* Quitar el subrayado */
-  color: white; /* Heredar el color del elemento padre */
-  font-family: "Tiny5", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: sans-serif;
+  text-decoration: none;
 }
 body{
   display: flex;
@@ -19,8 +14,7 @@ body{
   background: url("images/windowns.png");
   background-size: cover;
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   background-repeat: no-repeat;
 }
 .principal{
@@ -28,7 +22,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 2em;
+  font-family: "Tiny5", sans-serif;
 }
 img{
   height: 333px;
@@ -40,4 +35,66 @@ audio{
   position: absolute;
   visibility: hidden;
   max-height: 100px;
+}
+.clausura{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.cartel {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red;
+  background-color: black;
+  padding:25px 30px;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  transition: .5s;
+  letter-spacing: 4px;
+}
+.cartel:hover{
+  background-color: red;
+  color: black;
+  box-shadow: 0 0 5px red,
+              0 0 25px red,
+              0 0 50px red,
+              0 0 200px red;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, black);
+}
+.cartel a{
+  filter: hue-rotate(225deg);
+}
+.cartel a span{
+  position: absolute;
+  display: inline-block;
+}
+.cartel a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,transparent, red);
+  animation: animate1 1s infinite;
+}
+@keyframes animate1{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
+  }
+
+}
+
+.cartel p{
+
+  font-size: 1rem;
 }
