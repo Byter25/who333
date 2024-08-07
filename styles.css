@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: url("images/windowns.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
@@ -19,7 +23,7 @@ body{
   font-family: "Tiny5", sans-serif;
 }
 img{
-  height: 333px;
+  height: 8em;
 }
 audio{
   display: none; 
