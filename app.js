@@ -52,7 +52,7 @@ function comenzar() {
     // Selecciona la imagen con la clase 'kirby'
     const img = document.querySelector('.principal');
     if (img) {
-        img.style.visibility = "hidden";
+        img.style.display = "block";
     }
 
     const audio = document.getElementById('miAudio');
@@ -89,7 +89,7 @@ const context = canvas.getContext('2d', { willReadFrequently: true });
 video.addEventListener('loadeddata', () => {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    
+
     updateFrame();
     console.log("hola==??")
 });

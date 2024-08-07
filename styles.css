@@ -6,93 +6,10 @@
   text-decoration: none;
   text-align: center;
 }
-body{
-  background: url("images/windowns.png") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  min-height: 100vh;
-}
-.principal{
-  position: absolute;
-  font-size: 2em;
-  font-family: "Tiny5", sans-serif;
-}
-img{
-  display: block;
-  height: 8em;
-}
-audio{
-  display: none; 
-}
-.imgRandom {
-  position: absolute;
-  visibility: hidden;
-  max-height: 100px;
-}
-.clausura{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  min-width: 100vw;
-  background: rgba(0,0,0,0.5);
-}
-.cartel {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: red;
-  background-color: black;
-  padding:25px 30px;
-  border-radius: 10px;
-  font-size: 2.5rem;
-  transition: .5s;
-  letter-spacing: 4px;
-  font-family: sans-serif;
-}
 .cartel:hover{
-  background-color: red;
-  color: black;
   box-shadow: 0 0 5px red,
               0 0 25px red,
               0 0 50px red,
               0 0 200px red;
   -webkit-box-reflect: below 1px linear-gradient(transparent, black);
-}
-.cartel a{
-  filter: hue-rotate(225deg);
-}
-.cartel a span{
-  position: absolute;
-  display: inline-block;
-}
-.cartel a span:nth-child(1){
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg,transparent, red);
-}
-.cartel p{
-  font-size: 1rem;
-}
-video {
-  display: none;
-}
-canvas {
-  position: absolute;
-  height: 600px;
-  bottom: -160px;
-  left: 40%;
-  display: block;
 }
