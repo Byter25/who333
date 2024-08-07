@@ -1,28 +1,27 @@
 *{
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
   text-decoration: none;
+  text-align: center;
 }
 body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: url("images/windowns.png") no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   min-height: 100vh;
 }
 .principal{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
   font-size: 2em;
   font-family: "Tiny5", sans-serif;
 }
 img{
+  display: block;
   height: 8em;
 }
 audio{
@@ -58,6 +57,7 @@ audio{
   font-size: 2.5rem;
   transition: .5s;
   letter-spacing: 4px;
+  font-family: sans-serif;
 }
 .cartel:hover{
   background-color: red;
