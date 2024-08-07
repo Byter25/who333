@@ -82,10 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-let video = document.getElementById('video');
-let canvas = document.getElementById('canvas');
-let context = canvas.getContext('2d');
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d', { willReadFrequently: true });
 
+video.addEventListener('loadeddata', () => {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    
+    updateFrame();
+    console.log("hola==??")
+});
 
 function updateFrame() {
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -106,7 +113,3 @@ function updateFrame() {
     context.putImageData(frame, 0, 0);
     requestAnimationFrame(updateFrame);
 }
-
-canvas.width = video.videoWidth;
-canvas.height = video.videoHeight;
-updateFrame();
