@@ -80,3 +80,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Agregar el listener para inicializar las imágenes al cargar la página
     initializeImages();
 });
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+
+video.addEventListener('loadeddata', () => {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    updateFrame();
+});
+
+function updateFrame() {
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    let frame = context.getImageData(0, 0, canvas.width, canvas.height);
+    let length = frame.data.length / 4;
+
+    for (let i = 0; i < length; i++) {
+        let r = frame.data[i * 4 + 0];
+        let g = frame.data[i * 4 + 1];
+        let b = frame.data[i * 4 + 2];
+
+        // Si el color es verde, hazlo transparente
+        if (g > 100 && r < 100 && b < 100) {
+            frame.data[i * 4 + 3] = 0;
+        }
+    }
+
+    context.putImageData(frame, 0, 0);
+    requestAnimationFrame(updateFrame);
+}

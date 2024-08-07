@@ -37,6 +37,7 @@ audio{
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -83,6 +84,7 @@ audio{
   background: linear-gradient(90deg,transparent, red);
   animation: animate1 1s infinite;
 }
+
 @keyframes animate1{
   0%{
     left: -100%;
@@ -96,4 +98,13 @@ audio{
 .cartel p{
 
   font-size: 1rem;
+}
+video {
+  display: none; /* Oculta el video original */
+}
+canvas {
+  position: absolute;
+  height: 600px;
+  bottom: -120px;
+  display: block;
 }
