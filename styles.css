@@ -82,29 +82,17 @@ audio{
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg,transparent, red);
-  animation: animate1 1s infinite;
 }
-
-@keyframes animate1{
-  0%{
-    left: -100%;
-  }
-  100%{
-    left: 100%;
-  }
-
-}
-
 .cartel p{
-
   font-size: 1rem;
 }
 video {
-  display: none; /* Oculta el video original */
+  display: none;
 }
 canvas {
   position: absolute;
   height: 600px;
-  bottom: -120px;
+  bottom: -160px;
+  left: 40%;
   display: block;
 }
